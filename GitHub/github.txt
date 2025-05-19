@@ -3,3 +3,9 @@ EmailId : mahithaguda2@gmail.com
 Password : Mahi!2002
 UserId : maahi89
 ================================
+
+git status // just checking status
+git add . // adding your chnages file
+git commit -m "message"  // your commit message
+git status
+git push 
