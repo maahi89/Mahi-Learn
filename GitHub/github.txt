@@ -9,3 +9,9 @@ git add . // adding your chnages file
 git commit -m "message"  // your commit message
 git status
 git push 
+
+
+Created new branch 
+git branch branch name(no space)
+git checkout branch name
+
