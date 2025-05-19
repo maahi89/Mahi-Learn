@@ -1,0 +1,64 @@
+<!DOCTYPE> Declaration in HTML
+Definition: The <!DOCTYPE> declaration is an instruction to the web browser about what version of HTML the page is written in. It helps the browser render the page correctly.
+
+===================
+
+Anchor Tag in HTML (<a>)
+Definition: The <a> tag in HTML is used to create hyperlinks, which allow users to click and navigate to another page, website, or location within the same page.
+
+EX-
+<a href="URL">Link Text</a>
+
+============
+LISTS:
+ Unordered List (<ul>)
+Displays items with bullets.
+Used when the order of items does not matter.
+<ul>
+  <li>Apples</li>
+  <li>Bananas</li>
+  <li>Cherries</li>
+</ul>
+
+
+ Ordered List (<ol>):
+
+Displays items with numbers.
+Used when the order of items matters.
+<ol>
+  <li>Wake up</li>
+  <li>Brush teeth</li>
+  <li>Have breakfast</li>
+</ol>
+
+ Description List (<dl>):
+Used to list terms and their descriptions.
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+</dl>
+=====================
+
+What Are Semantic and Non-Semantic Elements?
+✅ Semantic Elements
+Definition: Elements that clearly describe their meaning to both the browser and the developer.
+Example: header, footer, section, aside, navbar
+
+❌ Non-Semantic Elements
+Definition: Elements that do not describe their content. They are generic containers.
+Example- div, span
+
+================
+Block-level Elements
+A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+ elements are: <p> and <div>.
+
+Inline Elements:
+An inline element does not start on a new line.
+An inline element only takes up as much width as necessary.
+
+Example:
+This is a <span> element inside a paragraph.
+
