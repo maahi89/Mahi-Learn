@@ -1,9 +1,10 @@
-//search filter value from input
+//search input value from the table
 document.getElementById('searchInput').addEventListener('keyup', function () {
     const filter = this.value.toLowerCase();
     const rows = document.querySelectorAll('#tableBody tr');
     let matchFound = false;
   
+    
     rows.forEach(row => {
       const text = row.textContent.toLowerCase();
       const isMatch = text.includes(filter);
