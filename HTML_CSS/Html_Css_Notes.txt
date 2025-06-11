@@ -65,3 +65,7 @@ An inline element only takes up as much width as necessary.
 Example:
 This is a <span> element inside a paragraph.
 
+
+
+Bootstrap:
+Bootstrap is a free, open-source front-end framework with HTML, CSS, and JavaScript templates for creating responsive websites. It provides basic styling for HTML elements and offers CSS classes and JavaScript components for further customifzation and interactive elements.
