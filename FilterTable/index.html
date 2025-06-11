@@ -1,73 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Filterable Table</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
+  <div class="container mt-4">
+    <h2 class="mb-4">Searchable & Editable Table</h2>
     
-    <div class="container">
-        <h2 class="mb-4">Searchable Table</h2>
-        <input type="text" id="searchInput" class="form-control" placeholder="Search table...">
+    <div class="row mb-3 align-items-center">
+        
+        <div class="col-md-6 text-end">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search table..." />
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">Add New Entry</button>
+          </div>
+      </div>
+      
+    <!-- Table -->
+    <table class="table table-bordered table-hover">
+      <thead class="table-dark">
+        <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr>
+          <td>Alice</td><td>24</td><td>New York</td>
+          <td>
+            <button class="btn btn-warning btn-sm edit-btn">Edit</button>
+            <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Bob</td><td>30</td><td>Los Angeles</td>
+          <td>
+            <button class="btn btn-warning btn-sm edit-btn">Edit</button>
+            <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-        <table class="table table-bordered table-hover mt-3">
-            <thead class="table-dark">
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>City</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-                <tr>
-                    <td>Alice</td>
-                    <td>24</td>
-                    <td>New York</td>
-                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
-                </tr>
+    <!-- Error Message -->
+    <p id="errorMsg" class="text-danger" style="display: none;">No matching records found.</p>
+  </div>
 
-                <tr>
-                    <td>Bob</td>
-                    <td>30</td>
-                    <td>Los Angeles</td>
-                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
-                <tr>
-                    <td>Charlie</td>
-                    <td>28</td>
-                    <td>Chicago</td>
-                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
-
-                </tr>
-
-                <tr>
-                    <td>David</td>
-                    <td>35</td>
-                    <td>Houston</td>
-                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
-
-                </tr>
-                <tr>
-                    <td>Eva</td>
-                    <td>22</td>
-                    <td>Miami</td>
-                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
-
-                </tr>
-            </tbody>
-        </table>
-
-        <p id="errorMsg" class="text-danger mt-2" style="display: none;">No matching records found.</p>
-
+  <!-- Add Modal -->
+  <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="addForm">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addModalLabel">Add New Entry</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" id="nameInput" class="form-control mb-2" placeholder="Name" required />
+            <input type="number" id="ageInput" class="form-control mb-2" placeholder="Age" required />
+            <input type="text" id="cityInput" class="form-control mb-2" placeholder="City" required />
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Add</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="editForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Entry</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="editName" class="form-control mb-2" placeholder="Name" required />
+          <input type="number" id="editAge" class="form-control mb-2" placeholder="Age" required />
+          <input type="text" id="editCity" class="form-control mb-2" placeholder="City" required />
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
-    <script src="script.js"></script>
+  <!-- Bootstrap JS + Custom Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>

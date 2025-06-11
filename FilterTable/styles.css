@@ -3,6 +3,6 @@ body {
   }
   
   #searchInput {
-    margin-bottom: 15px;
+    max-width: 400px;
   }
-   
+  
