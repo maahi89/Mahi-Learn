@@ -7,4 +7,4 @@ document.getElementById('searchInput').addEventListener('keyup', function () {
       row.style.display = text.includes(filter) ? '' : 'none';
     });
   });
-  
+   
