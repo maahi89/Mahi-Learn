@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Filterable Table</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filterable Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <div class="container">
-    <h2 class="mb-4">Searchable Table</h2>
-    <input type="text" id="searchInput" class="form-control" placeholder="Search table...">
+    <div class="container">
+        <h2 class="mb-4">Searchable Table</h2>
+        <input type="text" id="searchInput" class="form-control" placeholder="Search table...">
 
-    <table class="table table-bordered table-hover mt-3">
-      <thead class="table-dark">
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>City</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody">
-        <tr><td>Alice</td><td>24</td><td>New York</td></tr>
-        <tr><td>Bob</td><td>30</td><td>Los Angeles</td></tr>
-        <tr><td>Charlie</td><td>28</td><td>Chicago</td></tr>
-        <tr><td>David</td><td>35</td><td>Houston</td></tr>
-        <tr><td>Eva</td><td>22</td><td>Miami</td></tr>
-      </tbody>
-    </table>
-  </div>
+        <table class="table table-bordered table-hover mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td>Alice</td>
+                    <td>24</td>
+                    <td>New York</td>
+                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
+                </tr>
 
-  <script src="script.js"></script>
+                <tr>
+                    <td>Bob</td>
+                    <td>30</td>
+                    <td>Los Angeles</td>
+                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
+                <tr>
+                    <td>Charlie</td>
+                    <td>28</td>
+                    <td>Chicago</td>
+                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
+
+                </tr>
+
+                <tr>
+                    <td>David</td>
+                    <td>35</td>
+                    <td>Houston</td>
+                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
+
+                </tr>
+                <tr>
+                    <td>Eva</td>
+                    <td>22</td>
+                    <td>Miami</td>
+                    <td><button class="btn btn-danger btn-sm delete-btn">Delete</button></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <p id="errorMsg" class="text-danger mt-2" style="display: none;">No matching records found.</p>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
- 
